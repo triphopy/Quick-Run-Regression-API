@@ -8,8 +8,8 @@ from src.config import DEFAULT_ENVIRONMENT, output_dir, output_root_dir, resourc
 from src.dashboard import build_group_summary, build_run_summary, worst_group_summary
 from src.exporter import export_results_csv, export_results_xlsx
 from src.models import RunResult
-from src.parser import REQUIRED_COLUMNS, parse_csv_file, parse_csv_text
-from src.runner import create_run_id, execute_mock_run, execute_run
+from src.parser import REQUIRED_COLUMNS, parse_csv_file
+from src.runner import create_run_id, execute_run
 from src.selector import filter_test_cases, get_groups, select_all_ids
 from src.state import init_state, reset_loaded_data
 from src.ui import inject_css, metric_card
@@ -22,29 +22,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-
-MOCK_CSV = """group,api_name,method,endpoint,expected_status
-Authentication,Login,POST,/auth/login,200
-Authentication,Logout,POST,/auth/logout,200
-Authentication,Refresh Token,POST,/auth/refresh,200
-Order,Get Order List,GET,/order/list,200
-Order,Create Order,POST,/order/create,201
-Order,Update Order,PUT,/order/update,200
-Order,Cancel Order,DELETE,/order/cancel,200
-Payment,Process Payment,POST,/payment/process,200
-Payment,Payment Status,GET,/payment/status,200
-Payment,Refund,POST,/payment/refund,200
-Customer,Get Profile,GET,/customer/profile,200
-Customer,Update Profile,PUT,/customer/update,200
-Customer,Order History,GET,/customer/history,200
-Customer,Delete Account,DELETE,/customer/delete,200
-Inventory,List Items,GET,/inventory/list,200
-Inventory,Add Item,POST,/inventory/add,201
-Inventory,Update Item,PUT,/inventory/update,200
-Report,Daily Report,GET,/report/daily,200
-Report,Monthly Report,GET,/report/monthly,200
-Report,Export Report,POST,/report/export,200
-"""
 
 METHOD_COLORS = {
     "GET": "#1ea672",
@@ -98,16 +75,6 @@ def get_selected_count_for_view(apis) -> int:
         if st.session_state.get(f"api_{version}_{api.id}", api.id in st.session_state.selected_ids):
             selected_ids.add(api.id)
     return len(selected_ids)
-
-
-def toggle_api_selection(api_id: int) -> None:
-    if api_id in st.session_state.selected_ids:
-        st.session_state.selected_ids.discard(api_id)
-    else:
-        st.session_state.selected_ids.add(api_id)
-
-    version = st.session_state.selection_version
-    st.session_state[f"api_{version}_{api_id}"] = api_id in st.session_state.selected_ids
 
 
 def load_uploaded_file(uploaded_file) -> None:
@@ -394,7 +361,7 @@ def render_run_page() -> None:
     st.subheader("Select APIs To Run")
 
     if not st.session_state.apis:
-        st.info("Upload a CSV file or use mock data to continue.")
+        st.info("Upload a CSV file or load a sample to continue.")
         return
 
     groups = get_groups(st.session_state.apis)

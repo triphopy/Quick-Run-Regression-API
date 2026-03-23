@@ -6,7 +6,6 @@ from pathlib import Path
 
 DEFAULT_ENVIRONMENT = "UAT"
 DATA_DIR_NAME = "data"
-INPUT_DIR_NAME = "input"
 OUTPUT_DIR_NAME = "output"
 TEMP_DIR_NAME = "temp"
 ROBOT_DIR_NAME = "robot"
@@ -32,12 +31,6 @@ def project_root() -> Path:
 
 def data_dir() -> Path:
     path = project_root() / DATA_DIR_NAME
-    path.mkdir(parents=True, exist_ok=True)
-    return path
-
-
-def input_dir() -> Path:
-    path = data_dir() / INPUT_DIR_NAME
     path.mkdir(parents=True, exist_ok=True)
     return path
 
