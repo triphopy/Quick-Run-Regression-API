@@ -1,0 +1,9 @@
+group,api_name,method,endpoint,expected_status,request_body,headers,auth_type,auth_value,auth_header_name,timeout_seconds,response_json_path,expected_value,match_type,expected_contains
+Public Health,Health Check Pass,GET,https://dummyjson.com/test,200,,"{""X-Team"":""QA""}",,,,10,status,"""ok""",,
+Users,User 1 City Pass,GET,https://jsonplaceholder.typicode.com/users/1,200,,,,,,10,address.city,"""Gwenborough""",,
+Posts,Post 1 Title Contains Pass,GET,https://jsonplaceholder.typicode.com/posts/1,200,,,,,,10,title,,contains,repellat
+Products,Product Price Greater Than Pass,GET,https://dummyjson.com/products/1,200,,,,,,10,price,5,greater_than,
+Status Fail,Wrong Expected Status,GET,https://dummyjson.com/test,201,,,,,,10,status,"""ok""",,
+Equals Fail,Wrong City Equals,GET,https://jsonplaceholder.typicode.com/users/1,200,,,,,,10,address.city,"""Bangkok""",,
+Contains Fail,Title Missing Text,GET,https://jsonplaceholder.typicode.com/posts/1,200,,,,,,10,title,,contains,banana
+Numeric Fail,Price Greater Than Too High,GET,https://dummyjson.com/products/1,200,,,,,,10,price,999,greater_than,

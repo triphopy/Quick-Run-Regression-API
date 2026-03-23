@@ -1,0 +1,52 @@
+group,api_name,method,endpoint,expected_status
+DummyJSON,Health Check,GET,https://dummyjson.com/test,200
+DummyJSON,Client IP,GET,https://dummyjson.com/ip,200
+DummyJSON Products,List Products,GET,https://dummyjson.com/products,200
+DummyJSON Products,Get Product 1,GET,https://dummyjson.com/products/1,200
+DummyJSON Products,Search Products,GET,https://dummyjson.com/products/search?q=phone,200
+DummyJSON Products,Products With Limit And Skip,GET,https://dummyjson.com/products?limit=5&skip=5,200
+DummyJSON Products,Product Categories,GET,https://dummyjson.com/products/categories,200
+DummyJSON Products,Products By Category,GET,https://dummyjson.com/products/category/smartphones,200
+DummyJSON Carts,List Carts,GET,https://dummyjson.com/carts,200
+DummyJSON Carts,Get Cart 1,GET,https://dummyjson.com/carts/1,200
+DummyJSON Carts,Get Carts By User 5,GET,https://dummyjson.com/carts/user/5,200
+DummyJSON Recipes,List Recipes,GET,https://dummyjson.com/recipes,200
+DummyJSON Recipes,Get Recipe 1,GET,https://dummyjson.com/recipes/1,200
+DummyJSON Recipes,Search Recipes,GET,https://dummyjson.com/recipes/search?q=chicken,200
+DummyJSON Recipes,Recipes By Tag,GET,https://dummyjson.com/recipes/tag/italian,200
+DummyJSON Recipes,Recipes By Meal Type,GET,https://dummyjson.com/recipes/meal-type/dinner,200
+DummyJSON Users,List Users,GET,https://dummyjson.com/users,200
+DummyJSON Users,Get User 1,GET,https://dummyjson.com/users/1,200
+DummyJSON Users,Search Users,GET,https://dummyjson.com/users/search?q=john,200
+DummyJSON Users,Filter Users By Hair Color,GET,https://dummyjson.com/users/filter?key=hair.color&value=Brown,200
+DummyJSON Users,Get User 1 Carts,GET,https://dummyjson.com/users/1/carts,200
+DummyJSON Users,Get User 1 Posts,GET,https://dummyjson.com/users/1/posts,200
+DummyJSON Users,Get User 1 Todos,GET,https://dummyjson.com/users/1/todos,200
+DummyJSON Posts,List Posts,GET,https://dummyjson.com/posts,200
+DummyJSON Posts,Get Post 1,GET,https://dummyjson.com/posts/1,200
+DummyJSON Posts,Search Posts,GET,https://dummyjson.com/posts/search?q=love,200
+DummyJSON Posts,Posts By User 5,GET,https://dummyjson.com/posts/user/5,200
+DummyJSON Posts,Comments For Post 1,GET,https://dummyjson.com/posts/1/comments,200
+DummyJSON Comments,List Comments,GET,https://dummyjson.com/comments,200
+DummyJSON Comments,Get Comment 1,GET,https://dummyjson.com/comments/1,200
+DummyJSON Comments,Comments For Post 1,GET,https://dummyjson.com/comments/post/1,200
+DummyJSON Todos,List Todos,GET,https://dummyjson.com/todos,200
+DummyJSON Todos,Get Todo 1,GET,https://dummyjson.com/todos/1,200
+DummyJSON Todos,Random Todo,GET,https://dummyjson.com/todos/random,200
+DummyJSON Quotes,List Quotes,GET,https://dummyjson.com/quotes,200
+DummyJSON Quotes,Get Quote 1,GET,https://dummyjson.com/quotes/1,200
+DummyJSON Quotes,Random Quote,GET,https://dummyjson.com/quotes/random,200
+JSONPlaceholder Posts,List Posts,GET,https://jsonplaceholder.typicode.com/posts,200
+JSONPlaceholder Posts,Get Post 1,GET,https://jsonplaceholder.typicode.com/posts/1,200
+JSONPlaceholder Posts,Posts By User 1,GET,https://jsonplaceholder.typicode.com/posts?userId=1,200
+JSONPlaceholder Posts,Comments For Post 1,GET,https://jsonplaceholder.typicode.com/posts/1/comments,200
+JSONPlaceholder Users,List Users,GET,https://jsonplaceholder.typicode.com/users,200
+JSONPlaceholder Users,Get User 1,GET,https://jsonplaceholder.typicode.com/users/1,200
+JSONPlaceholder Users,User 1 Albums,GET,https://jsonplaceholder.typicode.com/users/1/albums,200
+JSONPlaceholder Users,User 1 Todos,GET,https://jsonplaceholder.typicode.com/users/1/todos,200
+JSONPlaceholder Albums,List Albums,GET,https://jsonplaceholder.typicode.com/albums,200
+JSONPlaceholder Albums,Album 1 Photos,GET,https://jsonplaceholder.typicode.com/albums/1/photos,200
+JSONPlaceholder Todos,List Todos,GET,https://jsonplaceholder.typicode.com/todos,200
+JSONPlaceholder Todos,Get Todo 1,GET,https://jsonplaceholder.typicode.com/todos/1,200
+JSONPlaceholder Comments,List Comments,GET,https://jsonplaceholder.typicode.com/comments,200
+JSONPlaceholder Comments,Get Comment 1,GET,https://jsonplaceholder.typicode.com/comments/1,200

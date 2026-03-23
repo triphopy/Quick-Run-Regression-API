@@ -1,0 +1,5 @@
+group,api_name,method,endpoint,expected_status
+Authentication,Login,POST,/auth/login,200
+Authentication,Refresh Token,POST,/auth/refresh,200
+Profile,Get Profile,GET,/profile/me,200
+Orders,List Orders,GET,/orders,200

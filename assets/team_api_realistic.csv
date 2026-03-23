@@ -1,0 +1,19 @@
+group,api_name,method,endpoint,expected_status,request_body,headers,auth_type,auth_value,auth_header_name,timeout_seconds,response_json_path,expected_value,match_type,expected_contains
+Public Health,Health Check With Team Header,GET,https://dummyjson.com/test,200,,"{""X-Team"":""QA"",""X-Scenario"":""regression""}",,,,10,status,"""ok""",,
+Public Health,Health Check With API Key Header,GET,https://dummyjson.com/test,200,,,API Key,demo-api-key,X-API-Key,10,status,"""ok""",,
+Public Health,Health Check With Bearer Header,GET,https://dummyjson.com/test,200,,,Bearer,demo-bearer-token,,10,status,"""ok""",,
+Users,User 1 City,GET,https://jsonplaceholder.typicode.com/users/1,200,,,,,,10,address.city,"""Gwenborough""",,
+Users,User 1 Email Exists,GET,https://jsonplaceholder.typicode.com/users/1,200,,,,,,10,email,,exists,
+Users,User 1 Username Not Equals,GET,https://jsonplaceholder.typicode.com/users/1,200,,,,,,10,username,"""Bret-Invalid""",not_equals,
+Posts,Get Post 1 Title Contains,GET,https://jsonplaceholder.typicode.com/posts/1,200,,,,,,10,title,,contains,repellat
+Posts,Get Post 1 Title Not Contains,GET,https://jsonplaceholder.typicode.com/posts/1,200,,,,,,10,title,,not_contains,banana
+Posts,Get Post 1 User Id,GET,https://jsonplaceholder.typicode.com/posts/1,200,,,,,,10,userId,1,,
+Posts,Create Post With Body Validation,POST,https://jsonplaceholder.typicode.com/posts,201,"{""title"":""Regression sample"",""body"":""Created by SONIC"",""userId"":7}","{""Content-type"":""application/json; charset=UTF-8""}",,,,20,title,"""Regression sample""",,
+Posts,Create Post User Id Validation,POST,https://jsonplaceholder.typicode.com/posts,201,"{""title"":""Regression sample"",""body"":""Created by SONIC"",""userId"":7}","{""Content-type"":""application/json; charset=UTF-8""}",,,,20,userId,7,,
+Products,Product 1 Title,GET,https://dummyjson.com/products/1,200,,,,,,10,title,"""Essence Mascara Lash Princess""",,
+Products,Product 1 Price,GET,https://dummyjson.com/products/1,200,,,,,,10,price,9.99,,
+Products,Product 1 Price Greater Than,GET,https://dummyjson.com/products/1,200,,,,,,10,price,5,greater_than,
+Products,Product 1 Price Less Than,GET,https://dummyjson.com/products/1,200,,,,,,10,price,20,less_than,
+Products,Product 1 Price Greater Or Equal,GET,https://dummyjson.com/products/1,200,,,,,,10,price,9.99,greater_or_equal,
+Products,Product 1 Price Less Or Equal,GET,https://dummyjson.com/products/1,200,,,,,,10,price,9.99,less_or_equal,
+Posts,User 1 Posts Array Validation,GET,https://jsonplaceholder.typicode.com/posts?userId=1,200,,,,,,15,0.userId,1,,

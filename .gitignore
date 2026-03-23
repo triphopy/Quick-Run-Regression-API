@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+.streamlit/
+.pytest_cache/
+
+data/output/
+data/temp/
+robot/generated/
+
+src/__pycache__/
+robot/resources/__pycache__/
+
+.DS_Store
+Thumbs.db
