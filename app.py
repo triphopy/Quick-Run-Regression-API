@@ -4,7 +4,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from src.config import DEFAULT_ENVIRONMENT, output_dir, output_root_dir, project_root, temp_dir
+from src.config import DEFAULT_ENVIRONMENT, output_dir, output_root_dir, resource_root, temp_dir
 from src.dashboard import build_group_summary, build_run_summary, worst_group_summary
 from src.exporter import export_results_csv, export_results_xlsx
 from src.models import RunResult
@@ -55,15 +55,15 @@ METHOD_COLORS = {
 ENVIRONMENT_OPTIONS = ["DEV", "UAT", "PROD", "CUSTOM"]
 AUTH_TYPE_OPTIONS = ["None", "Bearer", "API Key"]
 SAMPLE_FILES = {
-    "Public API Smoke": project_root() / "assets" / "public_api_smoke.csv",
-    "Public API Extended": project_root() / "assets" / "public_api_extended.csv",
-    "Team Realistic": project_root() / "assets" / "team_api_realistic.csv",
-    "Failure Examples": project_root() / "assets" / "team_api_failure_examples.csv",
-    "Demo Mix": project_root() / "assets" / "team_api_demo_mix.csv",
+    "Public API Smoke": resource_root() / "assets" / "public_api_smoke.csv",
+    "Public API Extended": resource_root() / "assets" / "public_api_extended.csv",
+    "Team Realistic": resource_root() / "assets" / "team_api_realistic.csv",
+    "Failure Examples": resource_root() / "assets" / "team_api_failure_examples.csv",
+    "Demo Mix": resource_root() / "assets" / "team_api_demo_mix.csv",
 }
 TEMPLATE_FILES = {
-    "Basic Template": project_root() / "assets" / "basic_template.csv",
-    "Advanced Template": project_root() / "assets" / "advanced_template.csv",
+    "Basic Template": resource_root() / "assets" / "basic_template.csv",
+    "Advanced Template": resource_root() / "assets" / "advanced_template.csv",
 }
 
 

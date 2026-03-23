@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+import sys
 from pathlib import Path
 
 DEFAULT_ENVIRONMENT = "UAT"
@@ -10,7 +12,21 @@ TEMP_DIR_NAME = "temp"
 ROBOT_DIR_NAME = "robot"
 
 
+def resource_root() -> Path:
+    env_path = os.environ.get("SONIC_RESOURCE_ROOT")
+    if env_path:
+        return Path(env_path)
+    if getattr(sys, "frozen", False):
+        return Path(getattr(sys, "_MEIPASS"))
+    return Path(__file__).resolve().parent.parent
+
+
 def project_root() -> Path:
+    env_path = os.environ.get("SONIC_RUNTIME_ROOT")
+    if env_path:
+        return Path(env_path)
+    if getattr(sys, "frozen", False):
+        return Path(sys.executable).resolve().parent
     return Path(__file__).resolve().parent.parent
 
 
@@ -45,7 +61,7 @@ def output_dir(run_id: str) -> Path:
 
 
 def robot_dir() -> Path:
-    return project_root() / ROBOT_DIR_NAME
+    return resource_root() / ROBOT_DIR_NAME
 
 
 def robot_generated_dir() -> Path:

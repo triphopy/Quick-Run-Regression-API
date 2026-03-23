@@ -147,3 +147,5 @@ See [phase1-design.md](docs/phase1-design.md) for the current phase 1 scope, dat
 For future support of external team CSV formats, see [import-adapter-design.md](docs/import-adapter-design.md).
 
 For day-to-day usage, see [quick-start.md](docs/quick-start.md).
+
+For Windows packaging, see [exe-packaging.md](docs/exe-packaging.md).

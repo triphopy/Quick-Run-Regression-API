@@ -9,6 +9,9 @@ __pycache__/
 data/output/
 data/temp/
 robot/generated/
+build/
+dist/
+*.spec
 
 src/__pycache__/
 robot/resources/__pycache__/
