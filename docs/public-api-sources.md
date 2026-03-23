@@ -1,6 +1,6 @@
 # Public API Test Sources
 
-The CSV files in [assets/public_api_smoke.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/public_api_smoke.csv) and [assets/public_api_extended.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/public_api_extended.csv) were built from public API documentation.
+The CSV files in [public_api_smoke.csv](../assets/public_api_smoke.csv) and [public_api_extended.csv](../assets/public_api_extended.csv) were built from public API documentation.
 
 ## Sources
 

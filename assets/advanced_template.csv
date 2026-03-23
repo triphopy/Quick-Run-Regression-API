@@ -1,5 +1,5 @@
 group,api_name,method,endpoint,expected_status,request_body,headers,auth_type,auth_value,auth_header_name,timeout_seconds,response_json_path,expected_value,match_type,expected_contains
-Authentication,Login,POST,/auth/login,200,"{""username"":""demo.user"",""password"":""secret""}",,Bearer,{{TOKEN}},Authorization,30,data.token,,exists,
+Authentication,Login,POST,/auth/login,200,"{""username"":""{{USERNAME}}"",""password"":""{{PASSWORD}}""}",,Bearer,{{TOKEN}},Authorization,30,data.token,,exists,
 Profile,Get Profile Email,GET,/profile/me,200,,,Bearer,{{TOKEN}},Authorization,30,data.email,"""qa-team@example.com""",,
 Orders,List Orders Count,GET,/orders,200,,,API Key,{{API_KEY}},X-API-Key,30,data.total,0,greater_or_equal,
 Orders,Order Status Contains Text,GET,/orders/123,200,,,Bearer,{{TOKEN}},Authorization,30,data.status,,contains,APPROVED

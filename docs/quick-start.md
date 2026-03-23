@@ -17,16 +17,18 @@ Use this guide to:
 Open PowerShell in the project folder:
 
 ```powershell
-cd C:\Users\jonew\Downloads\Pu\Quick-Run-Regression-API
+cd <your-project-folder>
 ```
 
 Run Streamlit:
 
 ```powershell
-C:\Users\jonew\AppData\Local\Programs\Python\Python314\python.exe -m streamlit run C:\Users\jonew\Downloads\Pu\Quick-Run-Regression-API\app.py --server.port 8501
+python -m streamlit run app.py --server.port 8501
 ```
 
 Then open the local URL shown by Streamlit in the browser.
+
+If `python` is not available on PATH, use the full Python path installed on your machine instead.
 
 ## Which Sample To Use
 

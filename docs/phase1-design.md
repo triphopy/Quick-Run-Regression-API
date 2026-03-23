@@ -142,12 +142,12 @@ Payment,Refund,POST,/payment/refund,200
 
 Suggested onboarding assets:
 
-- [basic_template.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/basic_template.csv) for simple test-case authoring
-- [advanced_template.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/advanced_template.csv) for APIs that need auth, headers, body, or response assertions
-- [team_api_realistic.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/team_api_realistic.csv) as a working reference
-- [team_api_failure_examples.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/team_api_failure_examples.csv) as a debugging reference with intentional failures
-- [team_api_demo_mix.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/team_api_demo_mix.csv) as a mixed pass/fail demo reference
-- [csv-cheatsheet.md](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/docs/csv-cheatsheet.md) as a quick reference for the team
+- [basic_template.csv](../assets/basic_template.csv) for simple test-case authoring
+- [advanced_template.csv](../assets/advanced_template.csv) for APIs that need auth, headers, body, or response assertions
+- [team_api_realistic.csv](../assets/team_api_realistic.csv) as a working reference
+- [team_api_failure_examples.csv](../assets/team_api_failure_examples.csv) as a debugging reference with intentional failures
+- [team_api_demo_mix.csv](../assets/team_api_demo_mix.csv) as a mixed pass/fail demo reference
+- [csv-cheatsheet.md](csv-cheatsheet.md) as a quick reference for the team
 
 ## Internal Models
 
@@ -312,7 +312,7 @@ Quick-Run-Regression-API/
 
 The next design step is module interface definition, so each component has a clear responsibility before implementation expands beyond the current mock UI.
 
-If external team CSV files arrive with a different schema, the recommended long-term approach is an adapter layer. See [import-adapter-design.md](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/docs/import-adapter-design.md).
+If external team CSV files arrive with a different schema, the recommended long-term approach is an adapter layer. See [import-adapter-design.md](import-adapter-design.md).
 
 ## Module Interfaces
 

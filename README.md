@@ -24,7 +24,7 @@ Phase 1 is intentionally lightweight:
 
 ## Current Status
 
-The repository currently contains a Streamlit application in [app.py](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/app.py) that supports the intended phase 1 flow:
+The repository currently contains a Streamlit application in [app.py](app.py) that supports the intended phase 1 flow:
 
 - upload CSV
 - select APIs by group
@@ -84,12 +84,12 @@ Payment,Refund,POST,/payment/refund,200
 
 Templates and examples:
 
-- [basic_template.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/basic_template.csv) for simple status checks
-- [advanced_template.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/advanced_template.csv) for auth/body/header/validation cases
-- [team_api_realistic.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/team_api_realistic.csv) for working public-API examples
-- [team_api_failure_examples.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/team_api_failure_examples.csv) for intentional failed cases
-- [team_api_demo_mix.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/team_api_demo_mix.csv) for a balanced pass/fail demo
-- [csv-cheatsheet.md](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/docs/csv-cheatsheet.md) for quick guidance on fields and match types
+- [basic_template.csv](assets/basic_template.csv) for simple status checks
+- [advanced_template.csv](assets/advanced_template.csv) for auth/body/header/validation cases
+- [team_api_realistic.csv](assets/team_api_realistic.csv) for working public-API examples
+- [team_api_failure_examples.csv](assets/team_api_failure_examples.csv) for intentional failed cases
+- [team_api_demo_mix.csv](assets/team_api_demo_mix.csv) for a balanced pass/fail demo
+- [csv-cheatsheet.md](docs/csv-cheatsheet.md) for quick guidance on fields and match types
 
 Placeholder support:
 
@@ -142,8 +142,8 @@ python -m streamlit run app.py
 
 ## Design Reference
 
-See [docs/phase1-design.md](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/docs/phase1-design.md) for the current phase 1 scope, data flow, file flow, and input/output contracts.
+See [phase1-design.md](docs/phase1-design.md) for the current phase 1 scope, data flow, file flow, and input/output contracts.
 
-For future support of external team CSV formats, see [import-adapter-design.md](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/docs/import-adapter-design.md).
+For future support of external team CSV formats, see [import-adapter-design.md](docs/import-adapter-design.md).
 
-For day-to-day usage, see [quick-start.md](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/docs/quick-start.md).
+For day-to-day usage, see [quick-start.md](docs/quick-start.md).

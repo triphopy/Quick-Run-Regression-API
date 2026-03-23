@@ -2,8 +2,8 @@
 
 ## Which template to use
 
-- Use [basic_template.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/basic_template.csv) when you only need status-code checks.
-- Use [advanced_template.csv](/C:/Users/jonew/Downloads/Pu/Quick-Run-Regression-API/assets/advanced_template.csv) when you need auth, headers, request bodies, timeouts, or response validation.
+- Use [basic_template.csv](../assets/basic_template.csv) when you only need status-code checks.
+- Use [advanced_template.csv](../assets/advanced_template.csv) when you need auth, headers, request bodies, timeouts, or response validation.
 
 ## Minimum columns
 
@@ -32,6 +32,8 @@
 - Supported placeholders:
   - `{{TOKEN}}`
   - `{{API_KEY}}`
+  - `{{USERNAME}}`
+  - `{{PASSWORD}}`
   - `{{AUTH_VALUE}}`
   - `{{AUTH_HEADER_NAME}}`
   - `{{BASE_URL}}`

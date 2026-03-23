@@ -1,7 +1,7 @@
 group,api_name,method,endpoint,expected_status,request_body,headers,auth_type,auth_value,auth_header_name,timeout_seconds,response_json_path,expected_value,match_type,expected_contains
 Public Health,Health Check With Team Header,GET,https://dummyjson.com/test,200,,"{""X-Team"":""QA"",""X-Scenario"":""regression""}",,,,10,status,"""ok""",,
-Public Health,Health Check With API Key Header,GET,https://dummyjson.com/test,200,,,API Key,demo-api-key,X-API-Key,10,status,"""ok""",,
-Public Health,Health Check With Bearer Header,GET,https://dummyjson.com/test,200,,,Bearer,demo-bearer-token,,10,status,"""ok""",,
+Public Health,Health Check With API Key Header,GET,https://dummyjson.com/test,200,,,API Key,{{API_KEY}},X-API-Key,10,status,"""ok""",,
+Public Health,Health Check With Bearer Header,GET,https://dummyjson.com/test,200,,,Bearer,{{TOKEN}},,10,status,"""ok""",,
 Users,User 1 City,GET,https://jsonplaceholder.typicode.com/users/1,200,,,,,,10,address.city,"""Gwenborough""",,
 Users,User 1 Email Exists,GET,https://jsonplaceholder.typicode.com/users/1,200,,,,,,10,email,,exists,
 Users,User 1 Username Not Equals,GET,https://jsonplaceholder.typicode.com/users/1,200,,,,,,10,username,"""Bret-Invalid""",not_equals,
